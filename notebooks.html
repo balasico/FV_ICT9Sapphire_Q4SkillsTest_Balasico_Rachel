@@ -8,7 +8,42 @@
 
 </head>
 <body>
-    
-    <p>notebooks</p>
+    <div class="container-fluid">
+    <div class="row flex-nowrap">
+        <!-- Sidebar -->
+        <div class="col-auto col-md-3 col-xl-2 px-sm-2 px-0 bg-dark">
+        <div class="d-flex flex-column align-items-center align-items-sm-start px-3 pt-2 text-white min-vh-100">
+            <a href="#" class="d-flex align-items-center pb-3 mb-md-0 mt-md-3 me-auto text-white text-decoration-none">
+                <span class="fs-5 d-none d-sm-inline">Menu</span>
+            </a>
+            <ul class="nav flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start" id="menu">
+                <li class="nav-item"> <a href="dashboard.html" class="nav-link px-0 link-light">Dashboard</a> </li>
+                <li class="nav-item"> <a href="notebooks.html" class="nav-link px-0 link-light">Virtual Notebooks</a> </li>
+                <li class="nav-item"> <a href="task.html" class="nav-link px-0 link-light">Task</a> </li>
+                <li class="nav-item"> <a href="profile.html" class="nav-link px-0 link-light">Profile</a> </li>
+                <li class="nav-item"> <a href="#" class="nav-link px-0 link-light" onclick="logout()">Logout</a> </li>
+            </ul>
+        </div>
+        </div>
+        <!-- Main Content -->
+        <div class="col py-3">
+            <h3>Notebooks</h3>
+            <p>Select a subject</p>
+        </div>
+    </div>
+    </div>
+
+
+    <script>
+        // for Logout with cancel option
+
+        function logout() {
+            let confirmLogout = confirm("Exit now?"); //confirm() has 2 options : ok (True) and cancel(False)
+            
+            if (confirmLogout) { //if ok or True
+                window.location.href = "index.html"; //load page
+            }
+        }
+    </script>
 </body>
 </html>
